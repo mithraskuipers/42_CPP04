@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ClapTrap.hpp                                       :+:    :+:            */
+/*   Animal.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/02/17 20:21:49 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/02/17 20:21:53 by mikuiper      ########   odam.nl         */
+/*   Created: 2023/02/19 16:02:54 by mikuiper      #+#    #+#                 */
+/*   Updated: 2023/02/19 16:04:03 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 #include <iostream>
 
-class	ClapTrap
+class	Animal
 {
+	protected:
+		std::string	type;
+};
+
+#endif
+
+/*
 	public:
-		ClapTrap(void);										// Default constructor
-		ClapTrap(std::string Name);							// Overloading constructor
-		ClapTrap(ClapTrap const &Source);					// Copy constructor
-		ClapTrap	&operator=(ClapTrap const &Source); 	// = operator overloading for ClapTrap class
-		~ClapTrap(void);									// Destructor
+		Animal(void);										// Default constructor
+		Animal(std::string Name);							// Overloading constructor
+		Animal(Animal const &Source);					// Copy constructor
+		Animal	&operator=(Animal const &Source); 	// = operator overloading for Animal class
+		~Animal(void);									// Destructor
 		void	attack(const std::string &target);			// Member function
 		void	takeDamage(unsigned int amount);			// Member function
 		void	beRepaired(unsigned int amount);			// Member function
@@ -31,6 +38,4 @@ class	ClapTrap
 		int			_hitPoints;
 		int			_energyPoints;
 		int			_attackDamage;
-};
-
-#endif
+*/
