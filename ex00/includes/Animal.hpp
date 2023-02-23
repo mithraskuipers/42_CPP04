@@ -17,25 +17,14 @@
 
 class	Animal
 {
+	public:
+		Animal(void);										// Default constructor
+		// Animal(std::string Name);							// Overloading constructor
+		Animal(Animal const &Source);					// Copy constructor
+		Animal	&operator=(Animal const &Source); 	// = operator overloading for Animal class
+		~Animal(void);									// Destructor	
 	protected:
 		std::string	type;
 };
 
 #endif
-
-/*
-	public:
-		Animal(void);										// Default constructor
-		Animal(std::string Name);							// Overloading constructor
-		Animal(Animal const &Source);					// Copy constructor
-		Animal	&operator=(Animal const &Source); 	// = operator overloading for Animal class
-		~Animal(void);									// Destructor
-		void	attack(const std::string &target);			// Member function
-		void	takeDamage(unsigned int amount);			// Member function
-		void	beRepaired(unsigned int amount);			// Member function
-	private:
-		std::string	_Name;
-		int			_hitPoints;
-		int			_energyPoints;
-		int			_attackDamage;
-*/
