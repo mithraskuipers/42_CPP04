@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
+/*   By: rbrune <rbrune@student.42.fr>                +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/19 16:03:04 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/02/19 16:03:18 by mikuiper      ########   odam.nl         */
+/*   Updated: 2023/02/24 15:57:03 by rbrune        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,14 @@
 //	- destructor: invoked when an object is deleted.
 
 #include "./../includes/Animal.hpp"
+#include "./../includes/Dog.hpp"
+
 
 int main(void)
 {
-
+	Animal diertje("Diertje");
+	diertje.makeSound();
+	Dog basje("rick");
+	basje.makeSound();
 	return 0;
 }

@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   Animal.cpp                                         :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
+/*   By: rbrune <rbrune@student.42.fr>                +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/19 16:02:59 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/02/19 16:03:01 by mikuiper      ########   odam.nl         */
+/*   Updated: 2023/02/24 15:56:05 by rbrune        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 // Constructor
 Animal::Animal(void)
 {
-	std::cout << "[Animal] Creating unnamed Animal via default constructor" << std::endl;
+	std::cout << "[Animal] Creating Animal via default constructor" << std::endl;
 	return ;
 }
 
 // Overloaded constructor
-// Animal::Animal(std::string Name)
-// {
-// 	return ;
-// }
+Animal::Animal(std::string Name)
+{
+	this->type = Name;
+	std::cout << "[Animal] Creating Animal via default constructor" << std::endl;
+	return ;
+}
 
 // Copy constructor
 Animal::Animal(const Animal &Source)
@@ -40,6 +42,11 @@ Animal	&Animal::operator=(Animal const &Source)
 	// std::cout << "Copy assignment operator called" << std::endl;
 	type = Source.type;
 	return (*this);
+}
+
+void	Animal::makeSound ( void )
+{
+	std::cout << "i'm an animal" << std::endl;
 }
 
 // Destructor
