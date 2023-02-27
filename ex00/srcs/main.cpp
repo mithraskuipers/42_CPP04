@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: rbrune <rbrune@student.42.fr>                +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2023/02/19 16:03:04 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/02/24 15:57:03 by rbrune        ########   odam.nl         */
-/*                                                                            */
-/* ************************************************************************** */
-
 //	Orthodox Canonical Form is also known as Orthodox Canonical Class Form.
 //	It means you classes need to have a default constructor, copy constructor
 //	destructor, and copy assignment operator.
@@ -22,13 +10,37 @@
 
 #include "./../includes/Animal.hpp"
 #include "./../includes/Dog.hpp"
-
+#include "./../includes/Cat.hpp"
+#include "./../includes/WrongAnimal.hpp"
+#include "./../includes/WrongCat.hpp"
 
 int main(void)
 {
-	Animal diertje("Diertje");
-	diertje.makeSound();
-	Dog basje("rick");
-	basje.makeSound();
+	Animal *animalobject = new Animal();
+	animalobject->makeSound();
+
+	Animal *dogobject = new Dog();
+	dogobject->makeSound();
+
+	Animal *catobject = new Cat();
+	catobject->makeSound();
+
+	WrongAnimal *wronganimalobject = new WrongAnimal();
+	wronganimalobject->makeSound();
+
+	WrongCat *wrongcatobject = new WrongCat();
+	wrongcatobject->makeSound();
+
+	/*
+	// Provided by subject
+	const Animal* meta = new Animal();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	std::cout << j->getType() << " " << std::endl; std::cout << i->getType() << " " << std::endl; i->makeSound(); //will output the cat sound! j->makeSound();
+	meta->makeSound();
+	*/
+
 	return 0;
 }
+
+// If you replace the Animal and the Cat by the wrong ones in the code above, the WrongCat should output the WrongAnimal sound.

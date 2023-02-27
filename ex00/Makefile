@@ -17,11 +17,11 @@ OBJ_DIR		=	objs/
 HDR_DIR		=	includes/
 
 # FILES
-SRC_FILES	=	main.cpp Animal.cpp Dog.cpp
+SRC_FILES	=	main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 				
 OBJ_FILES	=	$(SRC_FILES:.cpp=.o)
 
-HDR_FILES	=	Animal.hpp Dog.hpp
+HDR_FILES	=	Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
 
 SRC			=	$(addprefix $(SRC_DIR), $(SRC_FILES))
 OBJ			=	$(addprefix $(OBJ_DIR), $(OBJ_FILES))

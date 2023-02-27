@@ -1,18 +1,16 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        ::::::::            */
-/*   Cat.hpp                                            :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: rbrune <rbrune@student.42.fr>                +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2023/01/31 14:05:42 by rbrune        #+#    #+#                 */
-/*   Updated: 2023/01/31 14:06:37 by rbrune        ########   odam.nl         */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef CAT_HPP
+# define CAT_HPP
 
 #include "Animal.hpp"
 
-class Dog:: public Animal
+class Cat: public Animal
 {
+	public:
+		Cat();	
+		Cat( Cat const & src );
+		~Cat();
+		Cat &operator=(const Cat& ref);
+		void makeSound() const;
+};
 
-}
+#endif
