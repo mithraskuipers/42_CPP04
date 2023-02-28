@@ -10,7 +10,7 @@ class	Animal
 		Animal(std::string Name);					// Overloading constructor
 		Animal(Animal const &Source);				// Copy constructor
 		Animal	&operator=(const Animal &Source);	// = operator overloading for Animal class
-		~Animal(void);								// Destructor	
+		virtual ~Animal(void);								// Destructor	
 		virtual void makeSound() const;
 		std::string getType(void) const;
 	protected:

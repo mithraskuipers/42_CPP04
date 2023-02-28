@@ -13,6 +13,7 @@
 #include "./../includes/Cat.hpp"
 #include "./../includes/WrongAnimal.hpp"
 #include "./../includes/WrongCat.hpp"
+#include "./../includes/Brain.hpp"
 
 int main(void)
 {
@@ -31,14 +32,34 @@ int main(void)
 	WrongCat *wrongcatobject = new WrongCat();
 	wrongcatobject->makeSound();
 
-	/*
-	// main() calls as instructed in the subject
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl; std::cout << i->getType() << " " << std::endl; i->makeSound(); //will output the cat sound! j->makeSound();
-	meta->makeSound();
-	*/
+	Brain	*brainobject = new Brain();
+	// std::cout << brainobject->ideas << std::endl; // Print ideas memory address
+	brainobject->printIdeas(); // Print all ideas
 
+	// main() section as instructed in the subject
+	// The subject instructs to create n animals, with 50/50 dog/cat split. To prevent issues with
+	// uneven dog/cat splits, specify the amount of animals that will be created for both dogs/cats.
+	unsigned int	n_animals_per_type;
+	n_animals_per_type = 10;
+	Animal *animalobjects[n_animals_per_type * 2];
+	for (unsigned int i = 0; i < n_animals_per_type * 2; i++)
+	{
+		// First half dogs
+		if (i < n_animals_per_type)
+		{
+			animalobjects[i] = new Dog();
+		}
+		// Second half cats
+		else
+		{
+			animalobjects[i] = new Cat();
+		}
+	}
+
+	// Subject also instructs to delete the created animalobjects[]
+	for (unsigned int i = 0; i < sizeof(animalobjects) / sizeof(animalobjects)[0]; i++)
+	{
+		delete animalobjects[i];
+	}
 	return 0;
 }

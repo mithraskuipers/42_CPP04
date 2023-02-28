@@ -44,5 +44,5 @@ std::string Animal::getType(void) const
 
 void	Animal::makeSound (void) const
 {
-	std::cout << "[Animal][Sound]\t\tI am an animal" << std::endl;
+	std::cout << "[Animal][Sound]\tI am an animal" << std::endl;
 }
