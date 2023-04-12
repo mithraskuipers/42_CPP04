@@ -11,7 +11,7 @@ class	WrongAnimal
 		WrongAnimal(WrongAnimal const &Source);				// Copy constructor
 		WrongAnimal	&operator=(WrongAnimal const &Source); 	// = operator overloading for WrongAnimal class
 		~WrongAnimal(void);									// Destructor	
-		virtual void makeSound() const;
+		void makeSound() const;
 		std::string getType(void) const;
 	protected:
 		std::string	type;

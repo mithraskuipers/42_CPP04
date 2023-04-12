@@ -7,7 +7,7 @@ class Cat: public Animal
 {
 	public:
 		Cat();	
-		Cat( Cat const & src );
+		Cat(Cat const & src);
 		~Cat();
 		Cat &operator=(const Cat& ref);
 		void makeSound() const;

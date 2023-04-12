@@ -1,4 +1,4 @@
-// Exercise 01: I don’t want to set the world on fire
+// Exercise 02: Abstract class
 
 #include "./../includes/Animal.hpp"
 #include "./../includes/Dog.hpp"
@@ -41,8 +41,8 @@ void demonstrationDeepCopy()
 	
 int main(void)
 {
-	Animal *animalobject = new Animal();
-	animalobject->makeSound();
+	// Animal *animalobject = new Animal();
+	// animalobject->makeSound();
 
 	Animal *fakedogobject = new Dog();
 	fakedogobject->makeSound();
@@ -80,8 +80,20 @@ int main(void)
 		delete animalobjects[i];
 	}
 
-	demonstrationDeepCopy();
+	//demonstrationDeepCopy();
 
-	//system("leaks cpp04_ex01");
+	// Subject instructs to show that the Animal class can not be instantialized
+	/*
+	To make the Animal class non-instantiable, you need to make it an abstract class.
+	To make a class abstract, you need to have at least one pure virtual function.
+	In your current implementation, the destructor and makeSound() functions are 
+	already declared as a virtual function, so you can turn them in a pure virtual
+	function by adding = 0 to their declaration
+	*/
+
+	//Animal *animalobject = new Animal();
+	//animalobject->makeSound();
+
+	//system("leaks cpp04_ex02");
 	return 0;
 }

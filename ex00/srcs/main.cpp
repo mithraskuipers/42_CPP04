@@ -1,12 +1,4 @@
-//	Orthodox Canonical Form is also known as Orthodox Canonical Class Form.
-//	It means you classes need to have a default constructor, copy constructor
-//	destructor, and copy assignment operator.
-//	- default constructor: used internally to initialize objects and data members
-//	when no other value is available.
-//	- copy constructor: a copy constructor is a member function that initializes
-//	an object using another object of the same class
-//	- assignment operator: used to assign one value to another.
-//	- destructor: invoked when an object is deleted.
+// Exercise 00: Polymorphism
 
 #include "./../includes/Animal.hpp"
 #include "./../includes/Dog.hpp"
@@ -18,18 +10,23 @@ int main(void)
 {
 	Animal *animalobject = new Animal();
 	animalobject->makeSound();
+	delete animalobject;
 
 	Animal *dogobject = new Dog();
 	dogobject->makeSound();
+	delete dogobject;
 
 	Animal *catobject = new Cat();
 	catobject->makeSound();
+	delete catobject;
 
 	WrongAnimal *wronganimalobject = new WrongAnimal();
 	wronganimalobject->makeSound();
+	delete wronganimalobject;
 
 	WrongCat *wrongcatobject = new WrongCat();
 	wrongcatobject->makeSound();
+	delete wrongcatobject;
 
 	/*
 	// main() calls as instructed in the subject
@@ -39,6 +36,8 @@ int main(void)
 	std::cout << j->getType() << " " << std::endl; std::cout << i->getType() << " " << std::endl; i->makeSound(); //will output the cat sound! j->makeSound();
 	meta->makeSound();
 	*/
+
+	// system("leaks cpp04_ex00");
 
 	return 0;
 }
